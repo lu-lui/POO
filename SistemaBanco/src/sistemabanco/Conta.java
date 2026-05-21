@@ -6,18 +6,23 @@ public class Conta {
     double saldo;
     double limite = 1000;
     
-    boolean saca(double valor){
+    public Conta(int n, String d, double s, double l){
+        this.numero = n;
+        this.dono = d;
+        this.saldo = s;
+        this.limite = l;
+    }
+    
+    void saca(double valor){
         if(this.limite < valor){
             System.out.println("Valor excede o limite de saque. \nO limite e de R$" + limite);
-            return false;
         }
         
         if(this.saldo < valor){
             System.out.println("Saldo insuficiente");
-            return false;
         }else{
             this.saldo = this.saldo - valor;
-            return true;
+            System.out.println("Saque realizado com sucesso!");
         }
     }
     
@@ -34,5 +39,15 @@ public class Conta {
         System.out.println("Nome: " + this.dono);
         System.out.println("Saldo: " + this.saldo);
         System.out.println("Limite: " + this.limite);
+    }
+    
+    void transfere(Conta destino, double valor){
+        if(valor <= this.limite && valor <= saldo){
+            this.saldo -= valor;
+            destino.saldo += valor;
+            System.out.println("Transferência realizada com sucesso!");
+        }else {
+            System.out.println("A transferência não foi realizada. Verifique seu saldo ou limite e tente novamente.");
+        }         
     }
 }

@@ -5,9 +5,15 @@ public class SistemaBanco {
         Conta minhaConta[] = new Conta[2]; //inicialização do vetor
         Funcionario funcionarios;
         double ganho;
+        Banco bradesco = new Banco("Bradesco");
+        Banco banrisul = new Banco("Banrisul");
         
-        minhaConta[0] = new Conta(1234, "Maria", 0, 1000);
-        minhaConta[1] = new Conta(5678, "Joao", 2000, 800);
+        System.out.println(bradesco.pegaCodB());
+        System.out.println(banrisul.pegaCodB());
+        System.out.println(bradesco.pegaNomeB());
+        
+        minhaConta[0] = new Conta(1234, "Maria", 0, 1000, "Bradesco");
+        minhaConta[1] = new Conta(5678, "Joao", 2000, 800, "Banrisul");
         
         minhaConta[0].imprimeDados();
         minhaConta[1].imprimeDados();

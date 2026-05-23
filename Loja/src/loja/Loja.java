@@ -23,5 +23,4 @@ public class Loja {
             funcionaria[i].imprimeDados();
         }
     }
-    
 }

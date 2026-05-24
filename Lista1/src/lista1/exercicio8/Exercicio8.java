@@ -1,3 +1,5 @@
+//Escreva um programa que leia 5 valores inteiros e imprima a soma, média, máximo e minimo dos valores recebidos
+
 package lista1.exercicio8;
 import java.util.Scanner;
 

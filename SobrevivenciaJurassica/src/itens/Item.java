@@ -1,5 +1,5 @@
 package itens;
 
-public class Item {
+public abstract class Item {
     protected String nome;
 }

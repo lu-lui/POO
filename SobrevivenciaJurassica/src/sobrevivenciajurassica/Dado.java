@@ -1,13 +1,15 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package sobrevivenciajurassica;
 
-/**
- *
- * @author luisa
- */
+import java.util.Random;
+
 public class Dado {
+    private static Random random = new Random();
     
+    public static int dado6(){
+        return random.nextInt(5) + 1;
+    }
+    
+    public static int dado3(){
+        return random.nextInt(2) + 1;
+    }
 }

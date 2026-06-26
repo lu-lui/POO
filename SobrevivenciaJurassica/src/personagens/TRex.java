@@ -1,13 +1,14 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package personagens;
 
-/**
- *
- * @author luisa
- */
+import sobrevivenciajurassica.Posicao;
+import sobrevivenciajurassica.Tabuleiro;
+
 public class TRex {
-    
+   public TRex(Posicao posicao){
+       super(3, posicao ) //saude == 3
+   }
+   
+   public void mover(Tabuleiro tabuleiro){
+        //nn se move
+   }
 }

@@ -1,13 +1,15 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package personagens;
 
-/**
- *
- * @author luisa
- */
-public class Troodonte {
+import sobrevivenciajurassica.Posicao;
+import sobrevivenciajurassica.Tabuleiro;
+
+public class Troodonte extends Dinossauro{
+    public Troodonte(Posicao posicao){
+        super(2, posicao); //saude == 2
+    }    
     
+    @Override
+    public void mover(Tabuleiro tabuleiro){
+        moveAleatorio(tabuleiro);
+    }
 }

@@ -1,13 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package personagens;
 
-/**
- *
- * @author luisa
- */
-public class Velociraptor {
+import sobrevivenciajurassica.Posicao;
+import sobrevivenciajurassica.Tabuleiro;
+
+public class Velociraptor extends Dinossauro{
+    public Velociraptor(Posicao posicao){
+        super(2, posicao); //saude == 1
+    }    
     
+    @Override
+    public void mover(Tabuleiro tabuleiro){
+        moveAleatorio(tabuleiro);
+        moveAleatorio(tabuleiro);
+    }
 }

@@ -1,13 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package sobrevivenciajurassica;
 
-/**
- *
- * @author luisa
- */
+import personagens.Jogador;
+
 public class Jogo {
+    private Jogador jogador;
+    private Tabuleiro;
     
+    public void iniciar(){
+        
+    }
+    
+    public void executarTurno(){
+        
+    }
 }

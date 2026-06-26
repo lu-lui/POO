@@ -1,13 +1,38 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package sobrevivenciajurassica;
 
-/**
- *
- * @author luisa
- */
+import itens.CaixaSuprimentos;
+import personagens.Dinossauro;
+
 public class Celula {
+    private Dinossauro dinossauro;
+    private CaixaSuprimentos caixa;
+    private boolean parede;
     
+    public boolean ehParede(){
+        return parede; 
+    }
+    
+    public boolean temDinossauro(){ 
+        return dinossauro != null; 
+    }
+
+    public Dinossauro getDinossauro(){ 
+        return dinossauro; 
+    }
+    
+    public void setDinossauro(Dinossauro dinossauro){ 
+        this.dinossauro = dinossauro; 
+    }
+
+    public CaixaSuprimentos getCaixa(){ 
+        return caixa; 
+    }
+    
+    public void setCaixa(CaixaSuprimentos caixa){ 
+        this.caixa = caixa; 
+    }
+
+    public void setParede(boolean parede){ 
+        this.parede = parede; 
+    }
 }

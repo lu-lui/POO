@@ -1,13 +1,15 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package personagens;
 
-/**
- *
- * @author luisa
- */
-public class Compsognato {
+import sobrevivenciajurassica.Posicao;
+import sobrevivenciajurassica.Tabuleiro;
+
+public class Compsognato extends Dinossauro{
+    public Compsognato(Posicao posicao){
+        super(1, posicao); //saude == 1
+    }    
     
+    @Override
+    public void mover(Tabuleiro tabuleiro){
+        moveAleatorio(tabuleiro);
+    }
 }

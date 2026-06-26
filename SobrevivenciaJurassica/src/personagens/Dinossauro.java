@@ -1,13 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package personagens;
 
-/**
- *
- * @author luisa
- */
-public class Dinossauro {
+import sobrevivenciajurassica.Posicao;
+import sobrevivenciajurassica.Tabuleiro;        
+
+public abstract class Dinossauro extends Personagem implements Movimentos{
+    public Dinossauro(int saude, Posicao posicao){
+        super(saude, posicao);
+    }
     
+    public abstract void mover(Tabuleiro tabuleiro);
+    
+    public void moverAleatorio(Tabuleiro tabuleiro){
+        
+    }
 }

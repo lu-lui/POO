@@ -3,7 +3,7 @@ package personagens;
 import sobrevivenciajurassica.Posicao;
 
 public class Personagem {
-    protected int saude;
+    protected int saude;       
     protected Posicao posicao;
     
     public Personagem(int saude, Posicao posicao){
@@ -18,8 +18,12 @@ public class Personagem {
     public void recebeDano(int dano){
         saude -= dano;
     }
+    
+    public int getSaude(){ 
+        return saude; 
+    }
+    
+    public Posicao getPosicao(){ 
+        return posicao; 
+    }
 }
-
-
-
-

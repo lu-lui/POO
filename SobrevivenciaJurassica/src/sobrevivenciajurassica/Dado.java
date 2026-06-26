@@ -12,4 +12,8 @@ public class Dado {
     public static int dado3(){
         return random.nextInt(2) + 1;
     }
+    
+    public static int dado4(){
+    return random.nextInt(3) + 1; 
+    }
 }

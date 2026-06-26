@@ -25,4 +25,32 @@ public class Jogador extends Personagem{
     public void usouMunicao(){
         qtdMunicaoDardos--;
     }
+    
+    public int getPercepcao(){ 
+        return percepcao; 
+    }
+    
+    public boolean temBastao(){ 
+        return temBastao; 
+    }
+    
+    public boolean temArma(){ 
+        return temArma; 
+    }
+    
+    public int getQtdMunicao(){ 
+        return qtdMunicaoDardos; 
+    }
+    
+    public int getQtdKitsMedicos(){ 
+        return qtdKitsMedicos; 
+    }
+    
+    public void setBastao(boolean temBastao){ 
+        this.temBastao = temBastao; 
+    }
+   
+    public void setArma(boolean temArma){ 
+        this.temArma = temArma; 
+    }
 }

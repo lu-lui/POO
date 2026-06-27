@@ -35,4 +35,11 @@ public abstract class Dinossauro extends Personagem implements Movimentos{
             tabuleiro.getCelula(novaL, novaC).setDinossauro(this); //move o dinossauro p nova posição
         }
     }
+    
+    public void atacarJogador(Jogador jogador){
+        int dado = Dado.dado3();
+        if (dado > jogador.getPercepcao()) {
+            jogador.recebeDano(1); 
+        }
+    }
 }

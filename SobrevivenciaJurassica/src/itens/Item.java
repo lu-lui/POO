@@ -1,5 +1,13 @@
 package itens;
 
 public abstract class Item {
-    protected String nome;
+    private String nome;
+    
+    public Item(String nome){
+        this.nome = nome;
+    }
+    
+    public String getNome(){
+        return nome;
+    }
 }

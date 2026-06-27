@@ -4,7 +4,7 @@ import personagens.Jogador;
 
 public class Jogo {
     private Jogador jogador;
-    private Tabuleiro;
+    private Tabuleiro tabuleiro;
     
     public void iniciar(){
         

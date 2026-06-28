@@ -1,6 +1,7 @@
 package personagens;
 
 import sobrevivenciajurassica.Posicao;
+import itens.ArmaDardos;
 
 public class Jogador extends Personagem{
     private int percepcao;
@@ -8,6 +9,7 @@ public class Jogador extends Personagem{
     protected boolean temArma;
     private int qtdMunicaoDardos;
     private int qtdKitsMedicos;
+    private ArmaDardos arma;
     
     public Jogador (int percepcao, Posicao posicao){
         super(5, posicao); //saude comeca em 5
@@ -23,7 +25,7 @@ public class Jogador extends Personagem{
     }
     
     public void usouMunicao(){
-        qtdMunicaoDardos--;
+        arma.usarMunicao();
     }
     
     public int getPercepcao(){ 
@@ -34,7 +36,8 @@ public class Jogador extends Personagem{
         return temBastao; 
     }
     
-    public boolean temArma(){ 
+    public boolean temArma(ArmaDardos arma){ 
+        this.arma = arma;
         return temArma; 
     }
     
@@ -52,5 +55,13 @@ public class Jogador extends Personagem{
    
     public void setArma(boolean temArma){ 
         this.temArma = temArma; 
+    }
+    
+    public void addBastao(){
+        temBastao = true;
+    }
+    
+    public void addArma(){
+        temArma = true;
     }
 }

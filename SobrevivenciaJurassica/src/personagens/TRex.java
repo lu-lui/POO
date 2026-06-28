@@ -6,8 +6,8 @@ import sobrevivenciajurassica.Tabuleiro;
 
 public class TRex extends Dinossauro{
    public TRex(Posicao posicao){
-       super(3, posicao ); //saude == 3
-   }
+        super("R", 3, posicao); //saude começa em 3
+    }
    
    @Override
    public void mover(Tabuleiro tabuleiro){

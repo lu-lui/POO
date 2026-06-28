@@ -5,8 +5,11 @@ import sobrevivenciajurassica.Tabuleiro;
 import sobrevivenciajurassica.Dado;
 
 public abstract class Dinossauro extends Personagem implements Movimentos{
-    public Dinossauro(int saude, Posicao posicao){
+    private String nome;
+    
+    public Dinossauro(String nome, int saude, Posicao posicao){
         super(saude, posicao);
+        this.nome = nome;
     }
     
     public abstract void mover(Tabuleiro tabuleiro);
@@ -41,5 +44,9 @@ public abstract class Dinossauro extends Personagem implements Movimentos{
         if (dado > jogador.getPercepcao()) {
             jogador.recebeDano(1); 
         }
+    }
+    
+    public String getNomeDino(){
+        return nome;
     }
 }

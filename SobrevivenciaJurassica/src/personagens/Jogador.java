@@ -17,11 +17,12 @@ public class Jogador extends Personagem{
     }
     
     public void usarKitMedico(){
+        recuperaSaude();
         qtdKitsMedicos--;
     }
     
     public void addMunicao(){
-        qtdMunicaoDardos++;
+        arma.addMunicao();
     }
     
     public void usouMunicao(){
@@ -36,8 +37,7 @@ public class Jogador extends Personagem{
         return temBastao; 
     }
     
-    public boolean temArma(ArmaDardos arma){ 
-        this.arma = arma;
+    public boolean temArma(){ 
         return temArma; 
     }
     
@@ -61,7 +61,24 @@ public class Jogador extends Personagem{
         temBastao = true;
     }
     
-    public void addArma(){
+    public void addArma(ArmaDardos arma){
+        this.arma = arma;
         temArma = true;
+    }
+    
+    public void recuperaSaude(){
+        saude += 2;
+    }
+    
+    public void addKitMedico(){
+        qtdKitsMedicos++;
+    }
+    
+    public int checarSaude(){
+        if(saude <= 0){
+            System.out.println("Game over!");
+            return 1;
+        }
+        return 0;
     }
 }

@@ -17,8 +17,10 @@ public class TRex extends Dinossauro{
    @Override
    public void atacarJogador(Jogador jogador){
         int dado = Dado.dado3();
-        if (dado > jogador.getPercepcao()) {
-            jogador.recebeDano(2); 
+        if(dado > jogador.getPercepcao()){
+            System.out.println("Jogador sofreu 2 de dano ao encontrar um " + this.getNomeDino());
+            jogador.recebeDano(2);
         }
+        System.out.println("Jogador esquivou o ataque do " + this.getNomeDino());
     }
 }

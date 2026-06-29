@@ -2,11 +2,13 @@ package sobrevivenciajurassica;
 
 import itens.CaixaSuprimentos;
 import personagens.Dinossauro;
+import personagens.Jogador;
 
 public class Celula {
     private Dinossauro dinossauro;
     private CaixaSuprimentos caixa;
     private boolean parede;
+    private Jogador jogador;
     
     public boolean estaVazia(){
         if(!parede && caixa == null && dinossauro == null)
@@ -14,11 +16,22 @@ public class Celula {
         return false;
     }
     
+    public boolean estaJogador(){
+        return jogador != null;
+    }
+    
     public String mostraConteudo(){
-        if(temDinossauro())
-            return dinossauro.getNomeDino();
         if(ehParede())
             return "#";
+        if(estaJogador()){
+            if(temDinossauro())
+                return "P+" + dinossauro.getNomeDino();
+            if(temCaixa())
+                return "P+X";
+            return "P";
+        }
+        if(temDinossauro())
+            return dinossauro.getNomeDino();
         if(temCaixa())
             return "X";
         return " ";
@@ -54,5 +67,9 @@ public class Celula {
 
     public void setParede(boolean parede){ 
         this.parede = parede; 
+    }
+    
+    public void setJogador(Jogador jogador){
+        this.jogador = jogador;
     }
 }

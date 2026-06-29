@@ -20,7 +20,7 @@ public abstract class Dinossauro extends Personagem implements Movimentos{
         int novaL  = linha;
         int novaC = coluna;
         
-        int direcao = Dado.dado4();
+        int direcao = Dado.dado6();
         
         if (direcao == 1) 
             novaL = linha - 1; // cima
@@ -41,12 +41,23 @@ public abstract class Dinossauro extends Personagem implements Movimentos{
     
     public void atacarJogador(Jogador jogador){
         int dado = Dado.dado3();
-        if (dado > jogador.getPercepcao()) {
-            jogador.recebeDano(1); 
+        if(dado > jogador.getPercepcao()){
+            System.out.println("Jogador sofreu 1 de dano ao encontrar um " + nome);
+            jogador.recebeDano(1);
         }
+        
+        System.out.println("Jogador esquivou o ataque do " + nome);
     }
     
     public String getNomeDino(){
         return nome;
+    }
+    
+    public int checarSaude(){
+        if(saude <= 0){
+            System.out.println(nome + " morreu.");
+            return 1;
+        }
+        return 0;
     }
 }

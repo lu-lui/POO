@@ -1,19 +1,25 @@
 package itens;
 
+import personagens.Compsognato;
+
 public class CaixaSuprimentos {
     private Item item;
-    private boolean temCompsognato;
+    private Compsognato compsognato;
     
-    public CaixaSuprimentos(Item item, boolean temCompsognato){
+    public CaixaSuprimentos(Item item, Compsognato compsognato){
         this.item = item;
-        this.temCompsognato = temCompsognato;
+        this.compsognato = compsognato;
     }
     
     public boolean temCompsognato(){
-        return temCompsognato;
+        return compsognato != null;
     } 
     
     public Item getItem(){ 
         return item; 
+    }
+    
+    public Compsognato getComp(){
+        return compsognato;
     }
 }   

@@ -7,9 +7,8 @@ import java.util.Date;
 import java.util.Scanner;
 
 public class ProgramReservation {
-
-    public static void main(String[] args) { 
-        
+    
+    public static void main(String[] args) {     
         Scanner sc = new Scanner(System.in);
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         
@@ -39,6 +38,9 @@ public class ProgramReservation {
         catch (DomainException e){
             System.out.println("Error in reservation: " + e.getMessage()); //recebe a mensagem assada pelo throw de resrvation
         }
+        catch(RuntimeException e){
+            System.out.println("Unexpected error"); //mensagem de erro genérica para exceções geradas durante a execução do programa
+        }
+        sc.close();
     }
-    
 }

@@ -5,22 +5,22 @@
  */
 package sistemabancario;
 
-import meubanco.excecoes.SaldoInsuficiente;
+import sistemabancario.excecoes.SaldoInsuficiente;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import meubanco.excecoes.ContaNaoLocalizada;
-import meubanco.excecoes.IndiceForaDosLimites;
-import meubanco.excecoes.NaoHaEspacoSuficiente;
+import sistemabancario.excecoes.ContaNaoLocalizada;
+import sistemabancario.excecoes.IndiceForaDosLimites;
+import sistemabancario.excecoes.NaoHaEspacoSuficiente;
 
 /**
  *
  * @author Felipe Marques
  */
-public class Banco {
+public class SistemaBancario {
     private final Correntista[] contas;
     private int numeroDeContas;
     
-    public Banco(int numeroMaximoDeContas) {
+    public SistemaBancario(int numeroMaximoDeContas) {
         contas = new Correntista[numeroMaximoDeContas];
         numeroDeContas = 0;
     }
@@ -262,7 +262,7 @@ public class Banco {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Banco meuBanco = new Banco(5);
+        SistemaBancario meuBanco = new SistemaBancario(5);
         
         // -- Inclusão de contas para teste ------------------------------------
         meuBanco.incluirConta(new PessoaFisica("99999999999", "Darth Vader"));

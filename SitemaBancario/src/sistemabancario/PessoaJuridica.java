@@ -9,20 +9,24 @@ package sistemabancario;
  *
  * @author Felipe Marques
  */
-public class PessoaFisica extends Correntista {
-    private final String cpf;
-    private final String nome;
+public class PessoaJuridica extends Correntista {
+    public final String cnpj;
+    public final String razaoSocial;
+    public final String inscricaoEstadual;
     
-    public PessoaFisica(String cpf, String nome) {
+    public PessoaJuridica(String cnpj, String razaoSocial, String inscricaoEstadual) {
         super();
-        this.cpf = cpf;
-        this.nome = nome;
+        this.cnpj = cnpj;
+        this.inscricaoEstadual = inscricaoEstadual;
+        this.razaoSocial = razaoSocial;
     }
     
     @Override
     public String toString() {
         return super.toString() + "\n"
-                + "CPF: " + cpf
-                + "\nNome: " + nome;                
-    }    
+                + "CNPJ: " + cnpj
+                + "\nRazao Social: " + razaoSocial
+                + "\nInscrição Estadual: " + inscricaoEstadual;
+                
+    }
 }

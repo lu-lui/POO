@@ -5,7 +5,7 @@
  */
 package sistemabancario;
 
-import sistemabancario.
+import sistemabancario.excecoes.SaldoInsuficiente;
 
 /**
  *

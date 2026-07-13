@@ -6,6 +6,6 @@ public class ContaPoupanca extends ContaBancaria{
     }
     
     public double calculaRendimentoMensal(double percentual){
-        return super.getSalto() * (1 + percentual / 100);
+        return super.getSaldo() * (1 + percentual / 100);
     }
 }

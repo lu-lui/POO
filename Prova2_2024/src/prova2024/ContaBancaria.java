@@ -15,10 +15,11 @@ public class ContaBancaria implements TransacaoBancaria{
     public void sacar(double valor){
         if(valor > saldo) {
             throw new SaldoInsuficiente("Erro. Saldo insuficiente");
+        } else {
+            saldo -= valor;
         }
-        saldo -= valor;
     }
-    public double getSalto(){
+    public double getSaldo(){
         return saldo;
     }
 }

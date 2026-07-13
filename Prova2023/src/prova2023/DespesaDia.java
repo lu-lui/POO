@@ -1,13 +1,14 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package prova2023;
 
-/**
- *
- * @author luisa
- */
 public class DespesaDia extends DespesaMes {
-    
+    private int dia;
+
+    public DespesaDia(int dia, int mes, float valor) {
+        super(mes, valor);
+        this.dia = dia;
+    }
+
+    public int getDia() {
+        return dia;
+    }
 }
